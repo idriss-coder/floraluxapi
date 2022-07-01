@@ -1,13 +1,11 @@
-import { Router } from "express"
-import { extname, resolve } from "path"
-import fs from "fs"
-import { patcher } from "../../utils/pather.js"
-
-const route = Router()
+const Router = require("express").Router()
+const {extname, resolve} = require("path")
+const fs = require("fs")
+const { patcher } = require("../../utils/pather.js")
 
 const relativeImgPath = "src/public/cdn/image"
 
-route.get("/images", (req, res) => {
+Router.get("/images", (req, res) => {
     const images = [
         { 
             id: 1,
@@ -21,7 +19,7 @@ route.get("/images", (req, res) => {
     res.status(200).send(images)
 })
 
-route.get('/images/:img', (req, res) => {
+Router.get('/images/:img', (req, res) => {
     const query = req.query
     const params = req.params
 
@@ -38,4 +36,4 @@ route.get('/images/:img', (req, res) => {
     }
 })
 
-export {route as cdnRoute}
+module.exports = { Router }

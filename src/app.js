@@ -1,8 +1,8 @@
-import express from "express"
-import bodyParser from "body-parser"
-import cors from "cors"
-import { api } from "./api/api.js"
-import { generateAccessToken } from "./utils/jwt.js"
+const express = require("express")
+const bodyParser = require("body-parser")
+const cors = require("cors")
+const { api } = require("./api/api.js")
+const {generateAccessToken} = require("./utils/jwt.js")
 
 const app = express()
 
@@ -28,5 +28,5 @@ app.get("/",(_req, res, _next) => {
     })
 })
 
-export {app as app}
+module.exports = {app}
 

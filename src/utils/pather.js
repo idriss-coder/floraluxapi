@@ -1,4 +1,3 @@
-import os from "os"
 /**
  * 
  * @param {string} hostname
@@ -11,4 +10,4 @@ function patcher(hostname, resource){
     return `http://${host}/api/cdn/images/${resource}`
 }
 
-export {patcher}
+module.exports = {patcher}

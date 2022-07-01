@@ -1,5 +1,4 @@
-import dotenv from "dotenv"
-dotenv.config()
+const process = require("dotenv").config()
 
 const endpoint = process.env.API_URL
 const port = process.env.PORT
@@ -10,4 +9,4 @@ const dbUser = process.env.DB_USER
 const dbPass = process.env.DB_PASS
 const dbDialect = process.env.DB_DIALECT
 
-export {endpoint, port, masterKey, dbHost, dbName, dbUser, dbPass, dbDialect}
+module.exports = {endpoint, port, masterKey, dbHost, dbName, dbUser, dbPass, dbDialect}

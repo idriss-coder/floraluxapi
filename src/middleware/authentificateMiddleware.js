@@ -1,5 +1,5 @@
-import Jwt from "jsonwebtoken"
-import { masterKey } from "../config/index.js"
+const Jwt = require("jsonwebtoken")
+const { masterKey } = require("../config/index.js")
 
 const authentificateMiddleware = (request, response, next) => {
     const authHeader = req.headers["authorization"]
@@ -24,4 +24,4 @@ const authentificateMiddleware = (request, response, next) => {
     })
 }
 
-export { authentificateMiddleware }
+module.exports = { authentificateMiddleware }

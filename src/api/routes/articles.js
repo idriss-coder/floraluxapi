@@ -1,5 +1,5 @@
-import { Router} from "express";
-import { patcher } from "../../utils/pather.js";
+const Router = require("express").Router()
+const {patcher} = require("../../utils/pather.js")
 
 const route = Router()
 
@@ -48,4 +48,4 @@ route.get("/", (req, res, _next) => {
 })
 
 
-export {route as articlesRoute}
+module.exports = {route}
