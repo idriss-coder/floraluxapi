@@ -24,8 +24,8 @@ module.exports = {
         allowNull: false,
         type: Sequelize.INTEGER,
         references: {
-          model: "Files",
-          key: "id"
+          model: 'Files',
+          key: 'id'
         }
       },
       fk_user_id: {
