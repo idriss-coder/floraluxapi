@@ -10,11 +10,20 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      models.File.belongsTo(models.Article, {
+      File.belongsTo(models.Article, {
         foreignKey: {
-          allowNull: false
+          allowNull: false,
+          name: 'fk_file_id',
         }
       })
+
+      File.belongsTo(models.User, {
+        foreignKey: {
+          allowNull: false,
+          name: 'fk_avatar_id',
+        }
+      })
+
     }
   }
   File.init({

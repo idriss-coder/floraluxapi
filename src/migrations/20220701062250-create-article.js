@@ -22,11 +22,7 @@ module.exports = {
       },
       fk_file_id: {
         allowNull: false,
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'Files',
-          key: 'id'
-        }
+        type: Sequelize.INTEGER
       },
       fk_user_id: {
         allowNull: false,

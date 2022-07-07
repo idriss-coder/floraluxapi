@@ -1,6 +1,11 @@
-import http from "http"
-import {app} from "./app.js"
-import { port } from "./config/index.js"
+const express = require("express")
+const {app} = require("./app")
+const {port} = require("./config/index.js")
 
-const server = http.createServer(app)
-server.listen(port)
+const server = express()
+
+server.use(app)
+
+server.listen(port, () => {
+    console.log(`Server is running on port ${port}`)
+})

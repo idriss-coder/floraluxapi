@@ -36,4 +36,4 @@ Router.get('/images/:img', (req, res) => {
     }
 })
 
-module.exports = { Router }
+module.exports = Router

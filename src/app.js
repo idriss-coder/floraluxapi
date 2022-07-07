@@ -1,7 +1,7 @@
 const express = require("express")
 const bodyParser = require("body-parser")
 const cors = require("cors")
-const { api } = require("./api/api.js")
+const api = require("./api/api.js")
 const {generateAccessToken} = require("./utils/jwt.js")
 
 const app = express()

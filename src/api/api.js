@@ -1,11 +1,10 @@
 const Router = require("express").Router()
-const articlesRoute = require("./routes/articles.js")
+const articlesRoute = require("./routes/articlesRouter.js")
 const cdnRoute = require("./routes/cdn.js")
 
-const route = Router()
 
-route.use("/articles", articlesRoute)
-route.use("/cdn", cdnRoute)
+Router.use("/articles", articlesRoute)
+Router.use("/cdn", cdnRoute)
 
 
-module.exports = { route }
+module.exports = Router
