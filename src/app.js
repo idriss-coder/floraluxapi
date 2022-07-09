@@ -19,7 +19,7 @@ const user = {
 
 app.get("/",(_req, res, _next) => {
     console.log(`http://localhost:${port}`)
-    console.log(`Test with PM2: pm2 start pm2.config.js`)
+    console.log(`Test with PM2: pm2 start pm2.config.js let's go`)
     res.status(200).json({
         message: `${generateAccessToken(user)}`
     })
