@@ -4,7 +4,7 @@ const Article = require("../models/article")
 function getArticles(_req, res){
     models.Article.findAll()
     .then(articles => {
-        res.status(200).send(articles)
+        res.status(200).json({ articles })
     })
 }
 

@@ -42,7 +42,7 @@ Router.get("/", (req, res, _next) => {
         }
     ]
 
-    getArticles(req, res)
+    return getArticles(req, res)
 })
 
 
