@@ -41,7 +41,7 @@ Router.get("/", (req, res, _next) => {
             qtt: 12,
         }
     ]
-
+    console.log(req.headers.host)
     return getArticles(req, res)
 })
 
