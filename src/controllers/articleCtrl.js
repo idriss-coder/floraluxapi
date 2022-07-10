@@ -4,7 +4,13 @@ const Article = require("../models/article")
 function getArticles(_req, res){
     models.Article.findAll()
     .then(articles => {
-        res.status(200).json({ articles })
+        res.status(200).json([...articles])
+    })
+    .catch(err => {
+        res.status(500).json({
+            code: 500,
+            message: "Erreur lors de la recuperation des articles "
+        })
     })
 }
 
