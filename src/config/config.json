@@ -1,21 +1,21 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
+    "username": "postgres",
+    "password": "idriss",
     "database": "database_development_floralux",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "username": "root",
-    "password": null,
+    "username": "postgres",
+    "password": "idriss",
     "database": "database_test_floralux",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-    "username": "root",
-    "password": null,
+    "username": "postgres",
+    "password": "idriss",
     "database": "database_production_floralux",
     "host": "127.0.0.1",
     "dialect": "postgres"
