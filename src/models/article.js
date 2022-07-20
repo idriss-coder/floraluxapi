@@ -10,17 +10,16 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Article.hasMany(models.File, {
-        onDelete: "cascade",
-      })
+      // define association here
     }
   }
   Article.init({
     title: DataTypes.STRING,
     slug: DataTypes.STRING,
-    description: DataTypes.TEXT,
+    description: DataTypes.STRING,
     fk_file_id: DataTypes.INTEGER,
-    fk_user_id: DataTypes.INTEGER
+    fk_user_id: DataTypes.INTEGER,
+    fk_caracteristique_id: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Article',

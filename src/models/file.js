@@ -3,35 +3,23 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class File extends Model {
+  class file extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      File.belongsTo(models.Article, {
-        foreignKey: {
-          allowNull: false,
-          name: 'fk_file_id',
-        }
-      })
-
-      File.belongsTo(models.User, {
-        foreignKey: {
-          allowNull: false,
-          name: 'fk_avatar_id',
-        }
-      })
-
+      // define association here
     }
   }
-  File.init({
+  file.init({
     label: DataTypes.STRING,
-    path: DataTypes.STRING
+    path: DataTypes.STRING,
+    fk_ctg_file_id: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'File',
+    modelName: 'file',
   });
-  return File;
+  return file;
 };
